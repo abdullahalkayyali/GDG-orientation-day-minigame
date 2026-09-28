@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GDG — Simon Says</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234285f4'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='24' fill='white'%3EG%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/google-sans.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <div class="decoration" aria-hidden="true"><i class="ring"></i><i class="dot"></i><i class="square"></i><i class="pill"></i></div>
+  <main class="idle">
+    <h1 aria-label="GDG — Google Developer Group"><span class="blue">G</span><span class="red">D</span><span class="yellow">G</span><span class="green">.</span></h1>
+    <p id="status" role="status" aria-live="polite">Simon Says</p>
+    <div class="progress" role="progressbar" aria-label="Rounds completed" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
+      <span class="blue"></span><span class="red"></span><span class="yellow"></span><span class="green"></span><span class="blue"></span>
+    </div>
+    <div class="board" aria-label="CS icons">
+      <button class="tile blue" disabled aria-label="JavaScript, key 1"><img src="assets/javascript.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">JavaScript</span></button>
+      <button class="tile red" disabled aria-label="React, key 2"><img src="assets/react.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">React</span></button>
+      <button class="tile yellow" disabled aria-label="HTML, key 3"><img src="assets/html5.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">HTML</span></button>
+      <button class="tile green" disabled aria-label="Google, key 4"><img src="assets/google.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">Google</span></button>
+      <button class="tile blue" disabled aria-label="Python, key 5"><img src="assets/python.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">Python</span></button>
+      <button class="tile red" disabled aria-label="CSS, key 6"><img src="assets/css3.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">CSS</span></button>
+      <button class="tile yellow" disabled aria-label="GitHub, key 7"><img src="assets/github.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">GitHub</span></button>
+      <button class="tile green" disabled aria-label="Java, key 8"><img src="assets/java.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">Java</span></button>
+      <button class="tile blue" disabled aria-label="Android, key 9"><img src="assets/android.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">Android</span></button>
+      <button class="tile red" disabled aria-label="TypeScript, key 0"><img src="assets/typescript.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">TypeScript</span></button>
+      <button class="tile yellow" disabled aria-label="C++, key Q"><img src="assets/cplusplus.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">C++</span></button>
+      <button class="tile green" disabled aria-label="C#, key W"><img src="assets/csharp.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">C#</span></button>
+      <button class="tile blue" disabled aria-label="Kotlin, key E"><img src="assets/kotlin.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">Kotlin</span></button>
+      <button class="tile red" disabled aria-label="Swift, key R"><img src="assets/swift.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">Swift</span></button>
+      <button class="tile yellow" disabled aria-label="Docker, key T"><img src="assets/docker.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">Docker</span></button>
+      <button class="tile green" disabled aria-label="Git, key Y"><img src="assets/git.svg" alt="" width="56" height="56" draggable="false"><span class="tile-label">Git</span></button>
+    </div>
+    <p id="word" hidden></p>
+    <button id="start">Start Game</button>
+  </main>
+</body>
+</html>
